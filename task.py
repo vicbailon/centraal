@@ -4,15 +4,16 @@ def hello_world():
     print("- - - - - - - Exercises - - - - - - ");
     print("------------------------------------");
     print("                                    ");
-    print("--------------Fibonacci-------------");
+    print("---------- 1 - Fibonacci  -----------");
     index=5;
     print ("Position: %d" % (index))
     lista=fib(index);
     print (lista);
     print("------------------------------------");
     print("                                    ");
-    print("-------------Reverse list-----------");
+    print("----------  2 - Reverse list -------");
     original_list = [1,2,3,4,5,6];
+    salida=[]
     print("Original List:")
     print(original_list);
     lista = reverse_list(original_list);
@@ -20,7 +21,7 @@ def hello_world():
     print(lista);
     print("------------------------------------");
     print("                                    ");
-    print("-----------cumulative_sum-----------");
+    print("-------- 3 - Cumulative_sum --------");
     original_list = [1, 2, 3, 4, 5, 6];
     print("Original List:")
     print(original_list);
@@ -29,7 +30,7 @@ def hello_world():
     print(lista);
     print("------------------------------------");
     print("                                    ");
-    print("---------cumulative_product---------");
+    print("------ 4 - Cumulative_product ------");
     original_list = [1, 2, 3, 4, 5, 6];
     print("Original List:")
     print(original_list);
@@ -38,7 +39,7 @@ def hello_world():
     print(lista);
     print("------------------------------------");
     print("                                    ");
-    print("---------unique_elements---------");
+    print("------- 5 - Unique_elements --------");
     original_list = [1,'a','b',2,3,4,5,'b',6,4,3,2,1];
     print("Original List:");
     print(original_list);
@@ -47,7 +48,7 @@ def hello_world():
     print(lista);
     print("------------------------------------");
     print("                                    ");
-    print("---------duplicate_elements---------");
+    print("------- 6 - Duplicate_elements -----");
     original_list = [1,'a', 3, 4, 5, 6,'a', 3, 2, 1];
     print("Original List:");
     print(original_list);
@@ -56,7 +57,7 @@ def hello_world():
     print(lista);
     print("------------------------------------");
     print("                                    ");
-    print("--------------group list------------");
+    print("---------- 7- group list -----------");
     original_list = [1, 'a', 3, 4, 5, 6, 'a', 3, 2, 1];
     print("Original List:");
     print(original_list);
@@ -77,7 +78,21 @@ def fib(n):
         return lst
 
 def reverse_list(o_list): #checar otra opcion
-    return o_list[::-1]
+        """t=o_list[0]
+        o_list.pop()
+        if (o_list == []):
+             return  reverse_list(o_list)
+        return t"""
+        o_list.append(1)
+        if len(o_list) > 10:
+            print
+            o_list
+            return o_list
+        else:
+            return reverse_list(o_list) 
+       
+
+
 
 def cumulative_sum(o_list):
     lst=[];
