@@ -77,21 +77,16 @@ def fib(n):
         lst.append(lst[-1] + lst[-2])
         return lst
 
-def reverse_list(o_list): #checar otra opcion
-        """t=o_list[0]
-        o_list.pop()
-        if (o_list == []):
-             return  reverse_list(o_list)
-        return t"""
-        o_list.append(1)
-        if len(o_list) > 10:
-            print
-            o_list
-            return o_list
-        else:
-            return reverse_list(o_list) 
-       
 
+
+def reverse_list(o_list): #checar otra opcion
+    lst = [];
+    con=-1;
+    for item in o_list:
+        position= int(len(o_list)+con)
+        lst.append(o_list[position])
+        con=con-1
+    return lst
 
 
 def cumulative_sum(o_list):
