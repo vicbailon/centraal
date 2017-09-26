@@ -68,12 +68,12 @@ def hello_world():
 
 
 def fib(n):
-    if n == 0:
+    if n == 0:                         #case 0
         return [0]
-    elif n == 1:
+    elif n == 1:                       #case 1
         return [0, 1]
     else:
-        lst = fib(n-1)
+        lst = fib(n-1)                 #case n-1  w3
         lst.append(lst[-1] + lst[-2])
         return lst
 
