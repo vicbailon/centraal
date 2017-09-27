@@ -73,48 +73,50 @@ def fib(n):
     elif n == 1:                       #case 1
         return [0, 1]
     else:
-        lst = fib(n-1)                 #case n-1  w3
-        lst.append(lst[-1] + lst[-2])
+        lst = fib(n-1)                 #case 3 or more
+        lst.append(lst[-1] + lst[-2])  #we add list a lass value
         return lst
 
 
 
-def reverse_list(o_list): #checar otra opcion
-    lst = [];
-    con=-1;
-    for item in o_list:
-        position= int(len(o_list)+con)
-        lst.append(o_list[position])
-        con=con-1
-    return lst
+def reverse_list(o_list):
+    lst = [];                            #final list
+    con=-1;                              #inverse counter
+    for item in o_list:                  #loop
+        position= int(len(o_list)+con)   #get inverse position
+        lst.append(o_list[position])     #add to final list
+        con=con-1                        #move
+    return lst                           #return
 
 
 def cumulative_sum(o_list):
-    lst=[];
-    total=0;
-    for item in o_list:
-        total += item;
-        lst.append(total);
-
-    return lst
+    lst=[];                              #final list
+    total=0;                             #total
+    for item in o_list:                  #loop
+        total += item;                   #box
+        lst.append(total);               #add box
+    return lst                           #return
 
 def cumulative_product(o_list):
-    lst=[];
-    total=1;
-    for item in o_list:
-        total = total * item;
-        lst.append(total);
+    lst=[];                             #final list
+    total=1;                            #total
+    for item in o_list:                 #loop
+        total = total * item;           #box
+        lst.append(total);              #add box
 
     return lst
 
 def unique_list(o_list):
     elements = o_list #set(o_list) #AttributeError: 'set' object has not attribute 'count'
     final_list=[x for x in elements if (elements).count(x) == 1]
+    #         loop elements origin        condition    item into element =1
     return final_list
 
 def duplicate_list(o_list):
     elements = o_list #set(o_list) #AttributeError: 'set' object has not attribute 'count'
     final_list=set([x for x in elements if (elements).count(x) >= 2])
+    #         loop elements origin        condition    item into element =2
+
     return final_list
 
 def group(o_list,num):
